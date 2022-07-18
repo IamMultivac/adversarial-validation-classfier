@@ -170,6 +170,8 @@ class AdversarialValidation:
 
         self.shap_values = self._estimate_shap_values(self.base_estimator, X_test)
 
+        self.X_test = X_test
+
         print(f"init_performance_:{self.performance_}")
 
         return self
@@ -226,6 +228,7 @@ class AdversarialValidation:
         shap.summary_plot(
             self.shap_values,
             feature_names=self.features,
+            features = self.X_test,
             plot_type=plot_type,
             max_display=max_display,
         )
