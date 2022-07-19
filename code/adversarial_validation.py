@@ -345,3 +345,9 @@ class AdversarialValidation:
         """
 
         pickle.dump(self.base_estimator, open(f"{model_path}{model_name}.pickle", "wb"))
+
+
+    def model_performance_degradation(self):
+        """ """
+
+        pass
